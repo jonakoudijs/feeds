@@ -17,5 +17,6 @@ jobs:
           credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
       - uses: google-github-actions/deploy-cloud-functions@v0
         with:
-          name: 'feeds'
+          name: '${{ secrets.GCP_FUNCTION_NAME }}'
+          region: '${{ secrets.GCP_REGION }}'
           runtime: 'python310'
