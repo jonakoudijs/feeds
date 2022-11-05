@@ -11,7 +11,7 @@ def stackshare():
     page = requests.get(source)
     soup = BeautifulSoup(page.content, "html.parser")
 
-    parent  = soup.find("table")
+    parent = soup.find("table")
     entries = parent.find_all("tr")
     letters = []
 
@@ -23,12 +23,12 @@ def stackshare():
             cell1 = block[0].find("a")
             cell2 = block[1].find("a")
 
-            url   = cell1["href"]
+            url = cell1["href"]
             title = cell2.text
 
-            date  = cell1.text
-            date  = date.split("/")
-            date  = datetime.datetime(int(date[2]), int(date[0]), int(date[1]), tzinfo=pytz.UTC)
+            date = cell1.text
+            date = date.split("/")
+            date = datetime.datetime(int(date[2]), int(date[0]), int(date[1]), tzinfo=pytz.UTC)
 
             object = {
                 "id"    : url,
