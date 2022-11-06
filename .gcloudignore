@@ -1,0 +1,10 @@
+.gcloudignore
+.git
+.github
+.gitignore
+
+LICENSE
+README.md
+
+node_modules
+#!include:.gitignore

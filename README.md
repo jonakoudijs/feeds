@@ -4,8 +4,9 @@
 
 # Feeds
 
-Custom RSS feeds that I created for personal use but are publicly available and
-are free to use for everybody. Some of these feeds are specific Dutch websites.
+Custom RSS feeds created from various online sources that currently don't
+support RSS. I created these for personal use but are publicly available and
+are free to use for everybody. Most of these feeds are Dutch specific websites.
 
 ## RSS Feeds
 
@@ -13,7 +14,7 @@ The following RSS feeds are currently available:
 
 | Name       | Endpoint | Website |
 |------------|----------|---------|
-| Stackshare | [https://feeds.koudijs.app/stackshare](https://feeds.koudijs.app/stackshare)) | [https://stackshare.io/weekly](https://stackshare.io/weekly |
+| Stackshare | [https://feeds.koudijs.app/stackshare](https://feeds.koudijs.app/stackshare) | [https://stackshare.io/weekly](https://stackshare.io/weekly) |
 
 ## Development
 
