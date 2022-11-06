@@ -4,9 +4,12 @@
 
 # Feeds
 
-Custom RSS feeds created from various online sources that currently don't
-support RSS. I created these for personal use but are publicly available and
-are free to use for everybody. Most of these feeds are Dutch specific websites.
+Custom RSS feeds created from various online sources that currently don't them.
+I created these for personal use but are publicly available and are free to use
+for everybody.
+
+Keep in mind that most of these feeds are Dutch websites. If you have any
+recommendations or requests let me know in a Github issue.
 
 ## RSS Feeds
 
