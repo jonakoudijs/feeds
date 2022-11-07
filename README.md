@@ -17,7 +17,7 @@ The following RSS feeds are currently available:
 | Name       | Endpoint | Website |
 |------------|----------|---------|
 | Stackshare | [https://feeds.koudijs.app/stackshare](https://feeds.koudijs.app/stackshare) | [https://stackshare.io/weekly](https://stackshare.io/weekly) |
-| HUMAN | [https://feeds.koudijs.app/human](https://feeds.koudijs.app/human) | [http://human.nl/lees](http://human.nl/lees) |
+| HUMAN | [https://feeds.koudijs.app/human](https://feeds.koudijs.app/human) | [https://human.nl/lees](https://human.nl/lees) |
 
 ## Deployment
 
