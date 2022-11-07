@@ -19,4 +19,4 @@ jobs:
 
       - uses: 'google-github-actions/setup-gcloud@v0'
 
-      - run: 'gcloud info'
+      - run: 'gcloud functions list'
