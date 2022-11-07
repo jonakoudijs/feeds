@@ -45,4 +45,34 @@ def stackshare():
 def human():
     source = "https://www.human.nl/lees"
 
-    return source
+    page = requests.get(source)
+    soup = BeautifulSoup(page.content, "html.parser")
+
+    parent = soup.find("ul", {"id": "browsable-news-overview"})
+    entries = parent.find_all("li")
+    articles = []
+
+    for entry in entries:
+        url = entry.find("a")
+        url = "https://www.human.nl/" + url["href"]
+
+        article = entry.find("article")
+
+        title = article.find("h4", {"class": "complex-teaser-title"})
+        title = title.text
+
+        date = article.find("div", {"class": "complex-teaser-data"})
+        date = date.text
+
+        summary = article.find("p", {"class": "complex-teaser-summary"})
+        summary = summary.text
+
+        object = {
+            "id"    : url,
+            "title" : title,
+            "content" : summary
+        }
+
+        articles.append(object)
+
+    return articles

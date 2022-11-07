@@ -1,4 +1,3 @@
-[![Deploy Status](https://img.shields.io/github/workflow/status/jonakoudijs/feeds/deploy.svg?logo=github)](https://github.com/jonakoudijs/feeds/actions)
 [![CodeFactor](https://www.codefactor.io/repository/github/jonakoudijs/feeds/badge)](https://www.codefactor.io/repository/github/jonakoudijs/feeds)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
@@ -18,6 +17,21 @@ The following RSS feeds are currently available:
 | Name       | Endpoint | Website |
 |------------|----------|---------|
 | Stackshare | [https://feeds.koudijs.app/stackshare](https://feeds.koudijs.app/stackshare) | [https://stackshare.io/weekly](https://stackshare.io/weekly) |
+| HUMAN | [https://feeds.koudijs.app/human](https://feeds.koudijs.app/human) | [http://human.nl/lees](http://human.nl/lees) |
+
+## Deployment
+
+Running these feeds yourself can easily be done most serverless options. These
+feeds run on Google Cloud. Currently this is deployed manually. Deploying to
+Google Cloud can be done by `gcloud` cli. For example:
+```
+gcloud functions deploy feeds \
+  --gen2 \
+  --runtime=python310 \
+  --region=europe-west1 \
+  --entry-point=main \
+  --trigger-http
+```
 
 ## Development
 

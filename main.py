@@ -6,7 +6,7 @@ from feedgen.feed import FeedGenerator
 
 # functions
 from functions.feed import rss
-from functions.source import stackshare
+from functions.source import stackshare, human
 
 @functions_framework.http
 def main(request):
@@ -21,6 +21,16 @@ def main(request):
             title = "Stackshare",
             link = "https://feeds.koudijs.app/stackshare",
             description = "Stackshare Weekly",
+            items = source
+        )
+        return feed
+
+    if path[0] == "human":
+        source = human()
+        feed = rss(
+            title = "HUMAN",
+            link = "https://feeds.koudijs.app/human",
+            description = "Human Lees",
             items = source
         )
         return feed
