@@ -31,8 +31,9 @@ def stackshare():
             date = datetime.datetime(int(date[2]), int(date[0]), int(date[1]), tzinfo=pytz.UTC)
 
             object = {
-                "id"    : url,
+                "link"  : url,
                 "title" : title,
+                "content" : title,
                 "published" : date
             }
 
@@ -68,7 +69,7 @@ def human():
         summary = summary.text
 
         object = {
-            "id"    : url,
+            "link"  : url,
             "title" : title,
             "content" : summary
         }

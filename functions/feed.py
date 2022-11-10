@@ -12,19 +12,20 @@ def rss(title, link, description, items = []):
     # add items to feed
     for item in items:
         fe = fg.add_entry()
-        fe.id(item["id"])
+
+        link = {
+            "href" : item["link"],
+            "rel"  : "alternate"
+        }
+        fe.link(link)
         fe.title(item["title"])
 
         if "content" in item:
             fe.content(item["content"])
-        else:
-            combined = item["title"] + "</br></br>" \
-                       + "Source: " + "<a href=\"" + item["id"] \
-                       + "\">" + item["id"] + "</a>"
-            fe.content(combined)
 
         if "published" in item:
             fe.published(item["published"])
+
 
     # return generated feed
     feed = fg.rss_str(pretty=True)

@@ -16,6 +16,7 @@ def main(request):
     path.pop(0)
 
     if path[0] == "stackshare":
+        headers = { 'Content-Type': 'application/rss+xml' }
         source = stackshare()
         feed = rss(
             title = "Stackshare",
@@ -23,9 +24,10 @@ def main(request):
             description = "Stackshare Weekly",
             items = source
         )
-        return feed
+        return (feed, 200, headers)
 
     if path[0] == "human":
+        headers = { 'Content-Type': 'application/rss+xml' }
         source = human()
         feed = rss(
             title = "HUMAN",
@@ -33,7 +35,7 @@ def main(request):
             description = "Human Lees",
             items = source
         )
-        return feed
+        return (feed, 200, headers)
 
 
-    return "Page not found"
+    return ("Page not found", 404, { 'Content-Type': 'text/html' })
