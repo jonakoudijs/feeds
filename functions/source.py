@@ -63,7 +63,8 @@ def human():
         title = title.text
 
         date = article.find("div", {"class": "complex-teaser-data"})
-        date = date.text
+        date = human_date(date.text)
+        date = datetime.datetime(date["year"], date["month"], date["day"], tzinfo=pytz.UTC)
 
         summary = article.find("p", {"class": "complex-teaser-summary"})
         summary = summary.text
@@ -71,9 +72,35 @@ def human():
         object = {
             "link"  : url,
             "title" : title,
-            "content" : summary
+            "content" : summary,
+            "published" : date
         }
 
         articles.append(object)
 
     return articles
+
+def human_date(input):
+    months = {
+        "januari"   : "01",
+        "februari"  : "02",
+        "maart"     : "03",
+        "april"     : "04",
+        "mei"       : "05",
+        "juni"      : "06",
+        "juli"      : "07",
+        "augustus"  : "08",
+        "september" : "09",
+        "oktober"   : "10",
+        "november"  : "11",
+        "december"  : "12"
+    }
+
+    date = input.split(" ")
+    date = {
+        "day"   : int(date[0].zfill(2)),
+        "month" : int(months[date[1]]),
+        "year"  : int(date[2])
+    }
+
+    return date
