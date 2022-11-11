@@ -26,7 +26,7 @@ Running these feeds yourself can easily be done most serverless offerings. These
 feeds run on Google Cloud Functions and new versions of the code are deployed
 automatically via [Github Actions](https://github.com/jonakoudijs/feeds/actions).
 
-This can easily be manually deployed (with the correct credentials) by `gcloud` cli:
+This can easily be manually deployed (with the correct credentials) by using the `gcloud` cli:
 ```
 gcloud functions deploy my-function \
   --gen2 \
