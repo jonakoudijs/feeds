@@ -1,0 +1,23 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v3
+
+    - id: auth
+      uses: google-github-actions/auth@v0
+      with:
+        credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
+
+    - id: deploy
+      uses: google-github-actions/deploy-cloud-functions@v0
+      with:
+        name: '${{ secrets.GCP_FUNCTION_NAME }}'
+        region: '${{ secrets.GCP_REGION }}'
+        runtime: python310
+        entry_point: main

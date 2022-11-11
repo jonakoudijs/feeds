@@ -3,9 +3,9 @@
 
 # Feeds
 
-Custom RSS feeds created from various online sources that currently don't them.
-I created these for personal use but are publicly available and are free to use
-for everybody.
+Custom RSS feeds created from various online sources that currently don't offer
+them. I created these for personal use but are publicly available and are free
+to use for everybody.
 
 Keep in mind that most of these feeds are Dutch websites. If you have any
 recommendations or requests let me know in a Github issue.
@@ -21,11 +21,13 @@ The following RSS feeds are currently available:
 
 ## Deployment
 
-Running these feeds yourself can easily be done most serverless options. These
-feeds run on Google Cloud. Currently this is deployed manually. Deploying to
-Google Cloud can be done by `gcloud` cli. For example:
+Running these feeds yourself can easily be done most serverless offerings. These
+feeds run on Google Cloud Functions and new versions of the code are deployed
+automatically via [Github Actions](https://github.com/jonakoudijs/feeds/actions).
+
+This can easily be manually deployed (with the correct credentials) by `gcloud` cli:
 ```
-gcloud functions deploy feeds \
+gcloud functions deploy my-function \
   --gen2 \
   --runtime=python310 \
   --region=europe-west1 \
