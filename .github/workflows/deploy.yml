@@ -14,10 +14,14 @@ jobs:
       with:
         credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
 
+    - id: setup
+      uses: google-github-actions/setup-gcloud@v1
+
     - id: deploy
-      uses: google-github-actions/deploy-cloud-functions@v0
-      with:
-        name: '${{ secrets.GCP_FUNCTION_NAME }}'
-        region: '${{ secrets.GCP_REGION }}'
-        runtime: python310
-        entry_point: main
+      run: >-
+        gcloud functions deploy ${{ secrets.GCP_FUNCTION_NAME }}
+          --gen2
+          --runtime=python310
+          --region=${{ secrets.GCP_REGION }}
+          --entry-point=main
+          --trigger-http
