@@ -18,10 +18,10 @@ jobs:
       uses: google-github-actions/setup-gcloud@v1
 
     - id: deploy
-      run: >-
-        gcloud functions deploy ${{ secrets.GCP_FUNCTION_NAME }}
-          --gen2
-          --runtime=python310
-          --region=${{ secrets.GCP_REGION }}
-          --entry-point=main
+      run: |
+        gcloud functions deploy ${{ secrets.GCP_FUNCTION_NAME }} \
+          --gen2 \
+          --runtime=python310 \
+          --region=${{ secrets.GCP_REGION }} \
+          --entry-point=main \
           --trigger-http
