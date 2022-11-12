@@ -8,5 +8,4 @@ LICENSE
 README.md
 
 node_modules
-requirements.txt
 #!include:.gitignore
