@@ -24,7 +24,7 @@ The feeds are RSS only (not Atom or an other format).
 
 ## Deployment
 
-Running these feeds yourself can easily be done most serverless offerings. These
+Hosting these feeds yourself can easily be done on most serverless offerings. These
 feeds run on Google Cloud Functions and new versions of the code are deployed
 automatically via [Github Actions](https://github.com/jonakoudijs/feeds/actions).
 
