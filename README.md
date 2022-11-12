@@ -15,9 +15,9 @@ recommendations or requests let me know in a Github issue.
 
 The following RSS feeds are currently available:
 
-| Name       | Endpoint | Website |
-|------------|----------|---------|
-| Stackshare | [https://feeds.koudijs.app/stackshare](https://feeds.koudijs.app/stackshare) | [https://stackshare.io/weekly](https://stackshare.io/weekly) |
+| Name       | Endpoint | Website | Status |
+|------------|----------|---------|--------|
+| Stackshare | [https://feeds.koudijs.app/stackshare](https://feeds.koudijs.app/stackshare) | [https://stackshare.io/weekly](https://stackshare.io/weekly) | [![UptimeRobot Status](https://img.shields.io/uptimerobot/status/m793025109-e363b28f5eda97bbb7fffc99)]  |
 | HUMAN | [https://feeds.koudijs.app/human](https://feeds.koudijs.app/human) | [https://human.nl/lees](https://human.nl/lees) |
 
 ## Deployment

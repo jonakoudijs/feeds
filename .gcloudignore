@@ -2,9 +2,11 @@
 .git
 .github
 .gitignore
+gha-*.json
 
 LICENSE
 README.md
 
 node_modules
+requirements.txt
 #!include:.gitignore
