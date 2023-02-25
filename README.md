@@ -1,4 +1,4 @@
-[![Deploy Status](https://img.shields.io/github/workflow/status/jonakoudijs/feeds/deploy.svg?logo=github)](https://github.com/jonakoudijs/feeds/actions)
+[![Build Status](https://github.com/jonakoudijs/feeds/actions/workflows/deploy.yml/badge.svg)](https://github.com/jonakoudijs/feeds/actions)
 [![CodeFactor](https://www.codefactor.io/repository/github/jonakoudijs/feeds/badge)](https://www.codefactor.io/repository/github/jonakoudijs/feeds)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
