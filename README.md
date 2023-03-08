@@ -17,8 +17,8 @@ The following RSS feeds are currently available:
 
 | Name       | Endpoint | Website | Status |
 |------------|----------|---------|--------|
-| Stackshare | [https://feeds.koudijs.app/stackshare](https://feeds.koudijs.app/stackshare) | [https://stackshare.io/weekly](https://stackshare.io/weekly) | ![UptimeRobot Status](https://img.shields.io/uptimerobot/status/m793025109-e363b28f5eda97bbb7fffc99) |
-| HUMAN | [https://feeds.koudijs.app/human](https://feeds.koudijs.app/human) | [https://human.nl/lees](https://human.nl/lees) | ![UptimeRobot Status](https://img.shields.io/uptimerobot/status/m793025111-ebbb100cd61049252d097731) |
+| Stackshare | [https://feeds.koudijs.app/stackshare](https://feeds.koudijs.app/stackshare) | [https://stackshare.io/weekly](https://stackshare.io/weekly) | ![UptimeRobot Status](https://img.shields.io/uptimerobot/status/m793025111-ebbb100cd61049252d097731) |
+| HUMAN | [https://feeds.koudijs.app/human](https://feeds.koudijs.app/human) | [https://human.nl/lees](https://human.nl/lees) | ![UptimeRobot Status](https://img.shields.io/uptimerobot/status/m793025109-e363b28f5eda97bbb7fffc99) |
 
 The feeds are RSS only (not Atom or an other format).
 
