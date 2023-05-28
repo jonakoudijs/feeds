@@ -1,6 +1,7 @@
 # modules
 import requests
 import datetime
+import string
 import pytz
 from bs4 import BeautifulSoup
 
@@ -68,6 +69,10 @@ def human():
 
         summary = article.find("p", {"class": "complex-teaser-summary"})
         summary = summary.text
+
+        # force unicode only chars
+        printable = set(string.printable)
+        summary = ''.join(filter(lambda x: x in printable, summary))
 
         object = {
             "link"  : url,
